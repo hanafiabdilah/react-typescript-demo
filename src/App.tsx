@@ -1,6 +1,8 @@
 import './App.css';
+import { Button } from './components/Button';
 import { Great } from './components/Great';
 import { Heading } from './components/Heading';
+import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
@@ -29,6 +31,10 @@ function App() {
 
   return (
     <div className="App">
+      <Button handleClick={(event, id) => {
+        console.log('Button Clicked', event, id)
+      }} />
+      <Input value="" handleChange={event => console.log(event)} />
       <Great name="Hanafi" messageCount={20} isLoggedIn={true} />
       <Great name="Zahra" isLoggedIn={true} />
       <Person name={personName} />
