@@ -11,6 +11,8 @@ import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { DomRef } from './components/ref/DomRef';
+import { MutableRef } from './components/ref/MutableRef';
 import { Counter } from './components/state/Counter';
 import { LoggedIn } from './components/state/LoggedIn';
 import { Status } from './components/Status';
@@ -38,6 +40,16 @@ function App() {
 
   return (
     <div className="App">
+      <MutableRef />
+      <br />
+      <br />
+      <br />
+      <br />
+      <DomRef />
+      <br />
+      <br />
+      <br />
+      <br />
       <UserContextProvider>
         <User />
       </UserContextProvider>
