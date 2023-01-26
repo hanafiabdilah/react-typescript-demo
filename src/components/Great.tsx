@@ -4,13 +4,11 @@ type GreatProps = {
     isLoggedIn: boolean,
 }
 
-export const Great = (props: GreatProps) => {
-    const { messageCount = 0 } = props
-
+export const Great = ({ name, messageCount = 0, isLoggedIn }: GreatProps) => {
     return (
         <div>
             <h2>
-                {props.isLoggedIn ? ` Welcome ${props.name}! You have ${messageCount} unread messages` : 'Welcome Guest'}
+                {isLoggedIn ? ` Welcome ${name}! You have ${messageCount} unread messages` : 'Welcome Guest'}
             </h2>
         </div>
     )
