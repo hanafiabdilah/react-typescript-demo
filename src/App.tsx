@@ -3,6 +3,8 @@ import { Button } from './components/Button';
 import { Container } from './components/Container';
 import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
+import { User } from './components/context/User';
+import { UserContextProvider } from './components/context/UserContext';
 import { Great } from './components/Great';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
@@ -11,7 +13,6 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Counter } from './components/state/Counter';
 import { LoggedIn } from './components/state/LoggedIn';
-import { User } from './components/state/User';
 import { Status } from './components/Status';
 
 function App() {
@@ -37,11 +38,18 @@ function App() {
 
   return (
     <div className="App">
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
       <Counter />
-      <User />
       <LoggedIn />
       <Container styles={{ padding: '1rem', border: '1px solid red' }} />
       <Button handleClick={(event, id) => {
